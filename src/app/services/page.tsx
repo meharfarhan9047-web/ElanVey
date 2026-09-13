@@ -232,6 +232,7 @@ export default function ServicesPage() {
         </div>
       </section>
       <RacetrackStrip />
+      <div className="hide-footer-scallop" aria-hidden />
     </>
   );
 }

@@ -432,6 +432,7 @@ export default function AboutPage() {
         </div>
       </section>
       <RacetrackStrip />
+      <div className="hide-footer-scallop" aria-hidden />
     </>
   );
 }

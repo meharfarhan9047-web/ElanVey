@@ -7,7 +7,7 @@ import { ScallopDivider } from "@/components/ui/ScallopDivider";
 export function Footer() {
   return (
     <>
-      <ScallopDivider position="top" />
+      <ScallopDivider position="top" className="footer-scallop-divider" />
       <footer className="bg-ev-black text-white relative">
       {/* Main Footer Content */}
       <div className="container-content px-6 md:px-10 lg:px-16 pt-16 md:pt-24 pb-12 md:pb-16">

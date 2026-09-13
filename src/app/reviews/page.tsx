@@ -96,7 +96,6 @@ export default function ReviewsPage() {
             </p>
           </div>
         </div>
-        <div className="stamp-edge-bottom mt-12 md:mt-16" aria-hidden />
       </section>
 
       {/* ============ STATS + REVIEWS (paper) ============ */}
@@ -194,7 +193,6 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      <RacetrackStrip />
       {/* ============ CTA (dark) ============ */}
       <RacetrackStrip />
       <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-center text-white md:py-24">

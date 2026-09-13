@@ -8,7 +8,7 @@ export function SectionThree() {
 
           {/* Headline matching Mockup 2 */}
           <div className="mx-auto max-w-5xl text-center lg:max-w-6xl">
-            <h2 className="font-halenoir font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-black leading-tight">
+            <h2 className="font-brutal text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-black leading-tight">
               WHETHER YOU CREATE, BUILD, PERFORM, SELL,
               <br className="hidden md:block" />
               OR SIMPLY HAVE A TALENT WAITING TO BE DISCOVERED.

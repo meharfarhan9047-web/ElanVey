@@ -71,7 +71,6 @@ export default function ContactPage() {
             </p>
           </div>
         </div>
-        <div className="stamp-edge-bottom mt-12 md:mt-16" aria-hidden />
       </section>
 
       {/* ============ CONTACT CARDS + FORM (paper) ============ */}

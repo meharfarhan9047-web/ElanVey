@@ -80,7 +80,7 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed left-0 right-0 top-0 z-50 flex justify-center transition-all duration-500 ${
+        className={`fixed left-0 right-0 top-0 z-[999] flex justify-center transition-all duration-500 ${
           scrolled && !menuOpen ? "py-2.5 sm:py-3" : "py-3 sm:py-4"
         }`}
       >
@@ -132,7 +132,7 @@ export function Navbar() {
       </header>
 
       <div
-        className={`fixed inset-0 z-40 flex flex-col bg-ev-black transition-all duration-500 lg:hidden ${
+        className={`fixed inset-0 z-[998] flex flex-col bg-ev-black transition-all duration-500 lg:hidden ${
           menuOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"

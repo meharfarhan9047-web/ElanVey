@@ -70,7 +70,6 @@ export function LegalPage({
             </p>
           </div>
         </div>
-        <div className="stamp-edge-bottom mt-12 md:mt-16" aria-hidden />
       </section>
 
       {/* ============ CONTENT (paper) ============ */}

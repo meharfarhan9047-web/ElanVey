@@ -4,6 +4,8 @@ import { ReactNode, useEffect, useRef } from "react";
 import { ScallopDivider } from "@/components/ui/ScallopDivider";
 
 interface SectionProps {
+  noDividerTop?: boolean;
+  noDividerBottom?: boolean;
   children: ReactNode;
   className?: string;
   id?: string;
@@ -20,6 +22,8 @@ export function Section({
   id,
   animate = true,
   tone = "paper",
+  noDividerTop = false,
+  noDividerBottom = false,
   staggerChildren = false,
   staggerDelay = 80,
   variant = "fade-up",
@@ -67,7 +71,7 @@ export function Section({
 
   return (
     <>
-      {tone === "dark" && <ScallopDivider position="top" />}
+      {tone === "dark" && !noDividerTop && <ScallopDivider position="top" />}
       <section
         ref={ref}
         id={id}
@@ -78,7 +82,7 @@ export function Section({
       >
         {children}
       </section>
-      {tone === "dark" && <ScallopDivider position="bottom" />}
+      {tone === "dark" && !noDividerBottom && <ScallopDivider position="bottom" />}
     </>
   );
 }

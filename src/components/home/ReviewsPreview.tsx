@@ -80,7 +80,6 @@ export function ReviewsPreview() {
           </div>
         </div>
       </Section>
-      <div className="stamp-edge-top" aria-hidden />
     </>
   );
 }

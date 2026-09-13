@@ -88,7 +88,6 @@ export default function SubscriptionPage() {
             </p>
           </div>
         </div>
-        <div className="stamp-edge-bottom mt-12 md:mt-16" aria-hidden />
       </section>
 
       {/* ============ WHAT'S INCLUDED + PRICING (paper) ============ */}
@@ -158,7 +157,6 @@ export default function SubscriptionPage() {
         </div>
       </section>
 
-      <RacetrackStrip />
       {/* ============ ALL BENEFITS (dark) ============ */}
       <RacetrackStrip />
       <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-white md:py-24">
@@ -199,7 +197,6 @@ export default function SubscriptionPage() {
           </div>
         </div>
       </section>
-      <RacetrackStrip />
       {/* ============ HOW IT WORKS (paper) ============ */}
       <section
         className="relative overflow-hidden py-16 md:py-24"

@@ -1,3 +1,4 @@
+import { RacetrackStrip } from "@/components/ui/RacetrackStrip";
 import {
   AnimatedPacManPillIcon,
   BlueStarIcon,
@@ -75,7 +76,7 @@ export function SectionOne() {
       </section>
 
       {/* DARK SECTION: Who is Elan Vey For? + One Vey between You & Being Seen. */}
-      <ScallopDivider position="top" />
+      <RacetrackStrip />
       <section className="ev-spot" aria-labelledby="ev-title">
         <style
           dangerouslySetInnerHTML={{
@@ -331,7 +332,7 @@ export function SectionOne() {
         </div>
       </section>
 
-      <ScallopDivider position="bottom" />
+      <RacetrackStrip />
 
       {/* White Paper Section — Team Behind Your Content */}
       <section

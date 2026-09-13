@@ -6,8 +6,8 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://elanvey.com",
   ogImage: "/og-image.png",
   contact: {
-    email: "elanvey@gmail.com",
-    phone: "+91 9827249743 / +91 9791611851",
+    email: "vision@elanvey.com",
+    phone: "+91 9827249743 / +91 9187401977",
     address: "Rourkela, Odisha, 769001",
   },
   social: {

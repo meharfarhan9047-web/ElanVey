@@ -148,7 +148,6 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-        <div className="stamp-edge-bottom mt-12 md:mt-16" aria-hidden />
       </section>
 
       {/* ============ WHAT SETS US APART (paper) ============ */}
@@ -190,7 +189,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <RacetrackStrip />
       {/* ============ SLOGANS (dark) ============ */}
       <RacetrackStrip />
       <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-white md:py-24">
@@ -210,7 +208,6 @@ export default function AboutPage() {
           </Reveal>
         </div>
       </section>
-      <RacetrackStrip />
       {/* ============ EV STAMP STORY (paper) ============ */}
       <section
         className="relative overflow-hidden py-16 md:py-24"
@@ -299,7 +296,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <RacetrackStrip />
       {/* ============ FOUNDERS (paper) ============ */}
       <section
         id="founders"

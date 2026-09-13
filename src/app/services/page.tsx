@@ -75,7 +75,6 @@ export default function ServicesPage() {
             </p>
           </div>
         </div>
-        <div className="stamp-edge-bottom mt-12 md:mt-16" aria-hidden />
       </section>
 
       {/* ============ PROCESS (dark) ============ */}
@@ -122,7 +121,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <RacetrackStrip />
       {/* ============ SERVICES DETAIL (paper) ============ */}
       <section
         className="relative overflow-hidden py-16 md:py-24"

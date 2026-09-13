@@ -747,3 +747,8 @@
   animation: orbit-star-3d 8s linear infinite;
   transform-style: preserve-3d;
 }
+
+body:has(.hide-footer-scallop) .footer-scallop-divider {
+  display: none !important;
+}
+

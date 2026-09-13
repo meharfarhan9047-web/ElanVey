@@ -220,6 +220,7 @@ export default function ReviewsPage() {
         </div>
       </section>
       <RacetrackStrip />
+      <div className="hide-footer-scallop" aria-hidden />
     </>
   );
 }

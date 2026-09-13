@@ -92,7 +92,7 @@ export function ContactForm() {
     <BrutalPanel variant="cream" className="hover-lift">
       <form onSubmit={handleSubmit} noValidate className="space-y-6">
         <div className="grid gap-6 sm:grid-cols-2">
-          <div className="stagger-child">
+          <div >
             <label htmlFor="name" className="mb-2 block font-brutal text-xs uppercase">
               Name <span className="text-ev-neon-pink">*</span>
             </label>
@@ -114,7 +114,7 @@ export function ContactForm() {
               </p>
             )}
           </div>
-          <div className="stagger-child">
+          <div >
             <label htmlFor="email" className="mb-2 block font-brutal text-xs uppercase">
               Email <span className="text-ev-neon-pink">*</span>
             </label>
@@ -139,7 +139,7 @@ export function ContactForm() {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2">
-          <div className="stagger-child">
+          <div >
             <label htmlFor="phone" className="mb-2 block font-brutal text-xs uppercase">
               Phone
             </label>
@@ -155,7 +155,7 @@ export function ContactForm() {
               placeholder="Your phone number"
             />
           </div>
-          <div className="stagger-child">
+          <div >
             <label htmlFor="company" className="mb-2 block font-brutal text-xs uppercase">
               Company
             </label>
@@ -173,7 +173,7 @@ export function ContactForm() {
           </div>
         </div>
 
-        <div className="stagger-child">
+        <div >
           <label htmlFor="message" className="mb-2 block font-brutal text-xs uppercase">
             Message <span className="text-ev-neon-pink">*</span>
           </label>
@@ -196,7 +196,7 @@ export function ContactForm() {
           )}
         </div>
 
-        <div className="stagger-child">
+        <div >
           <Button type="submit" size="lg" className="w-full" loading={loading}>
             Send Message
           </Button>

@@ -209,7 +209,6 @@ export default function ServicesPage() {
       <StickyHelp />
 
       {/* ============ CTA (dark) ============ */}
-      <RacetrackStrip />
       <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-center text-white md:py-24">
         <div className="container-content px-5 md:px-8 lg:px-12">
           <Reveal>

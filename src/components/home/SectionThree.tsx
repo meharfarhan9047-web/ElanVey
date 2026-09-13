@@ -8,21 +8,11 @@ export function SectionThree() {
 
           {/* Headline matching Mockup 2 */}
           <div className="mx-auto max-w-5xl text-center lg:max-w-6xl">
-            <h2
-              className="font-brutal text-5xl font-black uppercase tracking-tight text-ev-neon-yellow sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
-              style={{
-                WebkitTextStroke: "2px #000"
-              }}
-            >
-              THE VEY
-              <br />
-              FORWARD
+            <h2 className="font-halenoir font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-black leading-tight">
+              WHETHER YOU CREATE, BUILD, PERFORM, SELL,
+              <br className="hidden md:block" />
+              OR SIMPLY HAVE A TALENT WAITING TO BE DISCOVERED.
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl font-brutal text-lg font-bold leading-snug text-black md:text-xl lg:text-2xl">
-              Whether you create, build, perform, sell,
-              <br className="hidden sm:block" />
-              or simply have a talent waiting to be discovered.
-            </p>
           </div>
         </div>
 
@@ -48,7 +38,7 @@ export function SectionThree() {
                   <circle cx="12" cy="10" r="4" fill="#FFE600" />
                   <path d="M7 18c0-3 2-5 5-5s5 2 5 5" fill="none" strokeWidth="2" strokeLinecap="round" />
                 </svg>
-                <span className="font-brutal text-sm sm:text-lg md:text-2xl lg:text-3xl font-black uppercase text-black tracking-tight">
+                <span className="font-halenoir text-sm sm:text-lg md:text-2xl lg:text-3xl font-medium uppercase text-black tracking-tight">
                   PERSONAL BRANDING
                 </span>
               </div>
@@ -63,7 +53,7 @@ export function SectionThree() {
                   <line x1="10" y1="6" x2="10" y2="14" strokeWidth="2" />
                   <line x1="6" y1="10" x2="14" y2="10" strokeWidth="2" />
                 </svg>
-                <span className="font-brutal text-sm sm:text-lg md:text-2xl lg:text-3xl font-black uppercase text-black tracking-tight">
+                <span className="font-halenoir text-sm sm:text-lg md:text-2xl lg:text-3xl font-medium uppercase text-black tracking-tight">
                   COMPETITOR ANALYSIS
                 </span>
               </div>
@@ -78,7 +68,7 @@ export function SectionThree() {
                   <path d="M22 21v-2a4 4 0 00-3-3.87" fill="none" strokeLinecap="round" />
                   <path d="M16 3.13a4 4 0 010 7.75" fill="none" strokeLinecap="round" />
                 </svg>
-                <span className="font-brutal text-sm sm:text-lg md:text-2xl lg:text-3xl font-black uppercase text-black tracking-tight">
+                <span className="font-halenoir text-sm sm:text-lg md:text-2xl lg:text-3xl font-medium uppercase text-black tracking-tight">
                   AUDIENCE BUILDING
                 </span>
               </div>
@@ -90,7 +80,7 @@ export function SectionThree() {
                   <path d="M22 2L15 9" strokeWidth="3" strokeLinecap="round" />
                   <path d="M19 2l3 3" strokeWidth="2" />
                 </svg>
-                <span className="font-brutal text-sm sm:text-lg md:text-2xl lg:text-3xl font-black uppercase text-black tracking-tight">
+                <span className="font-halenoir text-sm sm:text-lg md:text-2xl lg:text-3xl font-medium uppercase text-black tracking-tight">
                   CONTENT STRATEGY
                 </span>
               </div>
@@ -104,7 +94,7 @@ export function SectionThree() {
                   <path d="M3 15l5-5 4 4 9-9" fill="none" strokeWidth="3" />
                   <path d="M16 5h5v5" fill="#FF1744" strokeWidth="3" />
                 </svg>
-                <span className="font-brutal text-sm sm:text-lg md:text-2xl lg:text-3xl font-black uppercase text-black tracking-tight">
+                <span className="font-halenoir text-sm sm:text-lg md:text-2xl lg:text-3xl font-medium uppercase text-black tracking-tight">
                   GROWTH OPTIMISATION
                 </span>
               </div>
@@ -119,7 +109,7 @@ export function SectionThree() {
                   <path d="M12 2v1" fill="none" />
                   <path d="M12 15a4.5 4.5 0 003-8 4.5 4.5 0 00-6 0 4.5 4.5 0 003 8z" fill="#FFE600" />
                 </svg>
-                <span className="font-brutal text-sm sm:text-lg md:text-2xl lg:text-3xl font-black uppercase text-black tracking-tight">
+                <span className="font-halenoir text-sm sm:text-lg md:text-2xl lg:text-3xl font-medium uppercase text-black tracking-tight">
                   CONTENT IDEATION
                 </span>
               </div>
@@ -129,7 +119,7 @@ export function SectionThree() {
                   <path d="M12 7v10" strokeWidth="3" strokeLinecap="round" />
                   <path d="M9 10c0-1.5 1.5-2 3-2s3 .5 3 2-1.5 2-3 2-3 .5-3 2 1.5 2 3 2 3-.5 3-2" fill="none" strokeLinecap="round" />
                 </svg>
-                <span className="font-brutal text-sm sm:text-lg md:text-2xl lg:text-3xl font-black uppercase text-black tracking-tight">
+                <span className="font-halenoir text-sm sm:text-lg md:text-2xl lg:text-3xl font-medium uppercase text-black tracking-tight">
                   PAID GROWTH
                 </span>
               </div>

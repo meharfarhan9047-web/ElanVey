@@ -1,17 +1,25 @@
-"use client";
-
 import type { Metadata } from "next";
-import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { BrutalPanel } from "@/components/ui/BrutalPanel";
-import { CTABlock } from "@/components/ui/CTABlock";
-import { PageHero } from "@/components/ui/PageHero";
-import { Section } from "@/components/ui/Section";
-import {
-  subscriptionBenefits,
-  subscriptionFaqs,
-} from "@/data/subscription";
+import { Reveal } from "@/components/ui/Reveal";
+import { RacetrackStrip } from "@/components/ui/RacetrackStrip";
+import { SubscriptionFaq } from "@/components/subscription/SubscriptionFaq";
+import { subscriptionBenefits } from "@/data/subscription";
 import { siteConfig } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: "Subscription",
+  description:
+    "The Elan Vey subscription — steady guidance, great designs, and growth help, month after month.",
+  alternates: { canonical: `${siteConfig.url}/subscription` },
+};
+
+const paperBg = {
+  backgroundImage: "url('/images/Bg_paper.jpg')",
+  backgroundSize: "550px auto",
+  backgroundRepeat: "repeat" as const,
+};
+
+const yellowShadow = { textShadow: "3px 3px 0 #FF1744, 6px 6px 0 #660022" };
 
 const benefitAccents = [
   { icon: "◆", color: "bg-ev-neon-pink text-white" },
@@ -48,27 +56,53 @@ const subPerks = [
 ];
 
 export default function SubscriptionPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
-
   return (
     <>
-      <PageHero
-        label="Subscription"
-        title="Your ongoing creative partner"
-        subtitle="The Elan Vey subscription gives you steady guidance, great designs, and growth help — month after month, with no stress."
-        large
-        accent="yellow"
-        badge="Limited Spots · Chat With Us Today"
-      />
+      {/* ================= HERO ================= */}
+      <section
+        className="relative overflow-hidden bg-grid-lines-light pt-28 pb-14 md:pt-36 md:pb-20"
+        style={paperBg}
+      >
+        <div
+          className="pointer-events-none absolute right-8 top-24 hidden aspect-square w-16 rotate-[10deg] border-[3px] border-ev-neon-yellow bg-ev-neon-yellow/30 shadow-brutal md:block float-gentle"
+          aria-hidden
+        />
+        <div className="container-content relative px-5 md:px-8 lg:px-12">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="hero-stagger-label mb-6 flex justify-center">
+              <span className="inline-block rotate-[-2deg] border-[3px] border-black bg-ev-neon-cyan px-5 py-2 font-brutal text-xs uppercase tracking-wider shadow-brutal">
+                Limited Spots · Chat With Us Today
+              </span>
+            </div>
+            <p className="hero-stagger-label font-brutal text-xs uppercase tracking-[0.3em] text-ev-neon-pink">
+              Subscription
+            </p>
+            <h1 className="hero-stagger-title mt-6 font-brutal uppercase leading-[0.95] text-ev-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+              Your ongoing
+              <br className="hidden md:block" /> creative{" "}
+              <span className="text-ev-neon-pink">partner</span>
+            </h1>
+            <p className="hero-stagger-subtitle mx-auto mt-8 max-w-2xl text-lg font-bold leading-relaxed text-ev-black/80 md:text-xl">
+              The Elan Vey subscription gives you steady guidance, great
+              designs, and growth help — month after month, with no stress.
+            </p>
+          </div>
+        </div>
+        <div className="stamp-edge-bottom mt-12 md:mt-16" aria-hidden />
+      </section>
 
-      <Section tone="paper" className="!pt-0" staggerChildren staggerDelay={80}>
-        <div className="container-content">
-          <div className="grid gap-12 lg:grid-cols-2 items-start">
-            <div className="animate-on-scroll-slow">
-              <h2 className="brutal-text text-2xl text-ev-neon-pink md:text-4xl">
+      {/* ============ WHAT'S INCLUDED + PRICING (paper) ============ */}
+      <section
+        className="relative overflow-hidden py-16 md:py-24"
+        style={paperBg}
+      >
+        <div className="container-content px-5 md:px-8 lg:px-12">
+          <div className="grid items-start gap-12 lg:grid-cols-2">
+            <Reveal variant="left">
+              <h2 className="font-brutal text-2xl uppercase text-ev-neon-pink md:text-4xl">
                 What&apos;s included
               </h2>
-              <p className="mt-6 font-bold leading-relaxed text-ev-black/80 text-base md:text-lg">
+              <p className="mt-6 text-base font-bold leading-relaxed text-ev-black/80 md:text-lg">
                 A friendly all-in-one partnership for anyone who wants steady,
                 long-term progress. Every subscription includes planning help,
                 design work, and online support tailored to what you need.
@@ -77,19 +111,20 @@ export default function SubscriptionPage() {
                 {subPerks.map((item, i) => (
                   <li
                     key={item}
-                    className="stagger-child flex items-center gap-3 font-bold"
+                    className="flex items-center gap-3 font-bold"
                     style={{ transitionDelay: `${i * 60}ms` }}
                   >
-                    <span className="font-brutal text-ev-neon-cyan text-xl">
+                    <span className="font-brutal text-xl text-ev-neon-cyan">
                       ✓
                     </span>
                     {item}
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="relative animate-on-scroll-slow">
-              <BrutalPanel variant="yellow" className="hover-lift relative">
+            </Reveal>
+
+            <Reveal variant="right" className="relative">
+              <div className="relative rounded-[1.5rem] border-[3px] border-black bg-ev-neon-yellow p-7 shadow-brutal-xl hover-lift md:p-9">
                 <span className="ribbon-badge bg-ev-neon-pink text-ev-neon-yellow">
                   Best Value
                 </span>
@@ -97,7 +132,7 @@ export default function SubscriptionPage() {
                   Investment
                 </p>
                 <div className="mt-4 flex items-baseline gap-2">
-                  <p className="font-brutal text-3xl md:text-4xl text-ev-neon-red">
+                  <p className="font-brutal text-3xl text-ev-neon-red md:text-4xl">
                     Call for Pricing
                   </p>
                 </div>
@@ -108,145 +143,135 @@ export default function SubscriptionPage() {
                   <span className="font-brutal text-xs text-ev-neon-red">
                     SAVE 20%
                   </span>
-                  <span className="text-xs font-bold">vs. one-off projects</span>
+                  <span className="text-xs font-bold">
+                    vs. one-off projects
+                  </span>
                 </div>
                 <div className="mt-8">
                   <Button href="/contact" className="w-full">
                     Call Us Now
                   </Button>
                 </div>
-              </BrutalPanel>
-            </div>
+              </div>
+            </Reveal>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-20">
-            <p className="brutal-label stagger-child">All Benefits Included</p>
-            <h3 className="brutal-text mt-4 mb-12 text-3xl md:text-5xl stagger-child">
+      <RacetrackStrip />
+      {/* ============ ALL BENEFITS (dark) ============ */}
+      <RacetrackStrip />
+      <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-white md:py-24">
+        <div className="container-content px-5 md:px-8 lg:px-12">
+          <Reveal>
+            <p className="font-brutal text-xs uppercase tracking-[0.3em] text-ev-neon-yellow">
+              All Benefits Included
+            </p>
+            <h2
+              className="mt-4 mb-12 font-brutal text-3xl uppercase text-ev-neon-yellow md:text-5xl"
+              style={yellowShadow}
+            >
               Everything you need to{" "}
-              <span className="text-ev-neon-yellow">thrive</span>
-            </h3>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {subscriptionBenefits.map((benefit, i) => {
-                const accent = benefitAccents[i % benefitAccents.length];
-                return (
-                  <div
-                    key={benefit.title}
-                    className={`stagger-child brutal-card hover-lift ${accent.color}`}
-                  >
-                    <div className="flex items-start gap-3">
-                      <span className="font-brutal text-3xl">
-                        {accent.icon}
-                      </span>
-                      <h3 className="font-brutal text-base uppercase pt-1">
-                        {benefit.title}
-                      </h3>
-                    </div>
-                    <p className="mt-4 text-sm font-bold opacity-80">
-                      {benefit.description}
-                    </p>
+              <span className="text-ev-neon-pink">thrive</span>
+            </h2>
+          </Reveal>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {subscriptionBenefits.map((benefit, i) => {
+              const accent = benefitAccents[i % benefitAccents.length];
+              return (
+                <Reveal
+                  key={benefit.title}
+                  delay={i * 70}
+                  className={`rounded-[1rem] border-[3px] border-black p-6 shadow-brutal hover-lift md:p-8 ${accent.color}`}
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="font-brutal text-3xl">{accent.icon}</span>
+                    <h3 className="pt-1 font-brutal text-base uppercase">
+                      {benefit.title}
+                    </h3>
                   </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      <div className="checkerboard-divider" aria-hidden />
-
-      <Section tone="dark" staggerChildren staggerDelay={90}>
-        <div className="container-content">
-          <h2 className="brutal-text brutal-text-pink mb-12 stagger-child text-3xl text-ev-neon-yellow md:text-5xl">
-            How it works
-          </h2>
-          <div className="grid gap-6 items-start md:grid-cols-3">
-            {howItWorks.map((item, i) => (
-              <div
-                key={item.step}
-                className="stagger-child relative"
-              >
-                <div className="w-full border-[3px] border-ev-neon-pink p-6 md:p-8 hover-lift">
-                  <span className="font-brutal text-5xl md:text-6xl text-ev-neon-yellow">
-                    {item.step}
-                  </span>
-                  <h3 className="brutal-text brutal-text-cyan mt-4 text-xl md:text-2xl text-ev-neon-cyan">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm md:text-base font-bold text-white/70">
-                    {item.desc}
+                  <p className="mt-4 text-sm font-bold opacity-80">
+                    {benefit.description}
                   </p>
-                </div>
-                {i < howItWorks.length - 1 && (
-                  <span
-                    className="step-arrow absolute -right-5 top-1/2 -translate-y-1/2 z-10 hidden md:block"
-                    aria-hidden
-                  >
-                    →
-                  </span>
-                )}
-              </div>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
-      </Section>
-
-      <div className="stamp-edge-top" aria-hidden />
-
-      <Section tone="paper" staggerChildren staggerDelay={70}>
-        <div className="container-content max-w-3xl">
-          <h2 className="brutal-text mb-12 stagger-child text-3xl text-ev-neon-pink md:text-5xl">
-            Common questions
-          </h2>
-          <div className="space-y-4">
-            {subscriptionFaqs.map((faq, i) => (
-              <div
-                key={faq.question}
-                className="stagger-child brutal-card hover-lift"
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full cursor-pointer list-none font-brutal uppercase [&::-webkit-details-marker]:hidden text-left flex items-center justify-between gap-4"
-                  aria-expanded={openFaq === i}
-                >
-                  <span className="pr-4">{faq.question}</span>
-                  <span
-                    className={`font-brutal text-2xl text-ev-neon-pink transition-transform duration-300 flex-shrink-0 ${
-                      openFaq === i ? "rotate-45" : ""
-                    }`}
-                    aria-hidden
-                  >
-                    +
-                  </span>
-                </button>
-                <div
-                  className={`accordion-content ${
-                    openFaq === i ? "open" : ""
-                  }`}
-                >
-                  <div className="accordion-inner">
-                    <div className="mt-4 border-t-[3px] border-black pt-4">
-                      <p className="font-bold text-ev-black/80 leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      <CTABlock
-        dark={false}
-        title="Ready to subscribe?"
-        description="Take the first step toward steady, worry-free creative growth."
+      </section>
+      <RacetrackStrip />
+      {/* ============ HOW IT WORKS (paper) ============ */}
+      <section
+        className="relative overflow-hidden py-16 md:py-24"
+        style={paperBg}
       >
-        <Button href="/contact" size="lg">
-          Get Started
-        </Button>
-      </CTABlock>
+        <div className="container-content px-5 md:px-8 lg:px-12">
+          <Reveal>
+            <h2 className="mb-12 font-brutal text-3xl uppercase text-ev-neon-pink md:text-5xl">
+              How it works
+            </h2>
+          </Reveal>
+          <div className="grid items-start gap-6 md:grid-cols-3">
+            {howItWorks.map((item, i) => (
+              <Reveal
+                key={item.step}
+                delay={i * 90}
+                className="relative rounded-[1.25rem] border-[3px] border-black bg-ev-neon-cream p-6 shadow-brutal hover-lift md:p-8"
+              >
+                <span className="font-brutal text-5xl text-ev-neon-pink md:text-6xl">
+                  {item.step}
+                </span>
+                <h3 className="mt-4 font-brutal text-xl uppercase text-ev-black md:text-2xl">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm font-bold leading-relaxed text-ev-black/70 md:text-base">
+                  {item.desc}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ FAQ (dark) ============ */}
+      <RacetrackStrip />
+      <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-white md:py-24">
+        <div className="container-content max-w-3xl px-5 md:px-8 lg:px-12">
+          <Reveal>
+            <h2
+              className="mb-12 font-brutal text-3xl uppercase text-ev-neon-yellow md:text-5xl"
+              style={yellowShadow}
+            >
+              Common questions
+            </h2>
+          </Reveal>
+          <Reveal>
+            <SubscriptionFaq />
+          </Reveal>
+        </div>
+      </section>
+      <RacetrackStrip />
+      {/* ============ CTA (paper) ============ */}
+      <section
+        className="relative overflow-hidden py-16 text-center md:py-24"
+        style={paperBg}
+      >
+        <div className="container-content px-5 md:px-8 lg:px-12">
+          <Reveal>
+            <h2 className="mx-auto max-w-4xl font-brutal text-3xl uppercase text-ev-neon-pink sm:text-4xl md:text-5xl lg:text-6xl">
+              Ready to subscribe?
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl font-bold text-ev-black/80 md:text-lg">
+              Take the first step toward steady, worry-free creative growth.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <Button href="/contact" size="lg">
+                Get Started
+              </Button>
+            </div>
+          </Reveal>
+        </div>
+      </section>
     </>
   );
 }

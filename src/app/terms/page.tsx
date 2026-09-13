@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/ui/PageHero";
-import { Section } from "@/components/ui/Section";
+import { LegalPage, type LegalSection } from "@/components/legal/LegalPage";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -9,7 +8,9 @@ export const metadata: Metadata = {
   alternates: { canonical: `${siteConfig.url}/terms` },
 };
 
-const termsSections = [
+const lastUpdated = "August 2026";
+
+const termsSections: LegalSection[] = [
   {
     id: "acceptance-terms",
     number: "01",
@@ -108,100 +109,23 @@ const termsSections = [
   },
 ];
 
-const lastUpdated = "August 2026";
-
 export default function TermsPage() {
   return (
-    <>
-      <PageHero
-        label="Legal"
-        title="Terms of Service"
-        subtitle={`Last updated: ${lastUpdated}`}
-        accent="yellow"
-        badge="Fair Terms Before We Get Started"
-      />
-      <Section tone="paper" className="!pt-0" staggerChildren staggerDelay={70}>
-        <div className="container-content">
-          <div className="grid gap-12 lg:grid-cols-4">
-            <aside className="lg:col-span-1 stagger-child">
-              <div className="brutal-card p-6 hover-lift sticky top-28">
-                <p className="font-brutal text-xs uppercase tracking-widest">
-                  Table of Contents
-                </p>
-                <ul className="mt-6 space-y-3">
-                  {termsSections.map((s) => (
-                    <li key={s.id}>
-                      <a
-                        href={`#${s.id}`}
-                        className="group flex items-center gap-2 font-bold text-sm transition-colors hover:text-ev-neon-pink"
-                      >
-                        <span className="font-brutal text-xs text-ev-neon-red group-hover:translate-x-1 transition-transform">
-                          {s.number}
-                        </span>
-                        <span className="flex-1 leading-tight">
-                          {s.title}
-                        </span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </aside>
-
-            <div className="lg:col-span-3 space-y-8">
-              <div className="stagger-child brutal-card-yellow">
-                <div className="flex items-center gap-3 flex-wrap">
-                  <span className="inline-flex rotate-[-5deg] border-[3px] border-black bg-ev-neon-pink text-ev-neon-yellow px-4 py-2 font-brutal text-xs uppercase tracking-wider shadow-brutal">
-                    Last Updated: {lastUpdated}
-                  </span>
-                  <span className="inline-flex border-[3px] border-black bg-white px-4 py-2 font-brutal text-xs uppercase tracking-wider shadow-brutal">
-                    Binding Agreement
-                  </span>
-                  <span className="inline-flex border-[3px] border-black bg-ev-neon-cyan px-4 py-2 font-brutal text-xs uppercase tracking-wider shadow-brutal">
-                    For Everyone Who Uses Us
-                  </span>
-                </div>
-                <p className="mt-6 font-bold leading-relaxed text-ev-black/80">
-                  These Terms of Service (&quot;Terms&quot;) govern your access to and
-                  use of the Elan Vey website, products, and services. Please read them
-                  carefully before using our Services. Using our services means you
-                  accept these Terms. They apply to all visitors, clients, and
-                  anyone who accesses or uses the Services.
-                </p>
-              </div>
-
-              {termsSections.map((section, i) => (
-                <article
-                  key={section.id}
-                  id={section.id}
-                  className={`stagger-child brutal-card hover-lift ${
-                    i % 3 === 1 ? "!bg-ev-neon-yellow" : ""
-                  } ${i % 3 === 2 ? "!bg-ev-neon-cream" : ""}`}
-                >
-                  <div className="flex items-baseline gap-4">
-                    <span className="font-brutal text-5xl md:text-6xl text-ev-neon-pink/30">
-                      {section.number}
-                    </span>
-                    <h2 className="brutal-text text-xl md:text-2xl text-ev-black flex-1">
-                      {section.title}
-                    </h2>
-                  </div>
-                  <div className="mt-6 pl-0 md:pl-8 space-y-4">
-                    {section.paragraphs.map((p, pi) => (
-                    <p
-                      key={pi}
-                      className="font-bold leading-relaxed text-ev-black/80"
-                    >
-                      {p}
-                    </p>
-                  ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </Section>
-    </>
+    <LegalPage
+      label="Legal"
+      title="Terms of Service"
+      lastUpdated={lastUpdated}
+      badge="Fair Terms Before We Get Started"
+      accent="yellow"
+      introBadges={[
+        { text: `Last Updated: ${lastUpdated}`, color: "bg-ev-neon-pink text-ev-neon-yellow" },
+        { text: "Binding Agreement", color: "bg-white" },
+        { text: "For Everyone Who Uses Us", color: "bg-ev-neon-cyan" },
+      ]}
+      introHtml={
+        "These Terms of Service (&quot;Terms&quot;) govern your access to and use of the Elan Vey website, products, and services. Please read them carefully before using our Services. Using our services means you accept these Terms. They apply to all visitors, clients, and anyone who accesses or uses the Services."
+      }
+      sections={termsSections}
+    />
   );
 }

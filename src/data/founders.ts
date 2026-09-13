@@ -4,21 +4,36 @@ export interface Founder {
   role: string;
   bio: string;
   quote?: string;
+  linkedinUrl?: string;
+  imageUrl?: string;
 }
 
 export const founders: Founder[] = [
   {
-    id: "founder-1",
-    name: "Founder One",
-    role: "Creative Lead",
-    bio: "Passionate about making ideas look great. With years of hands-on design experience, Founder One loves turning simple thoughts into visuals that catch eyes and start conversations. Every project gets personal attention and creative energy from start to finish.",
+    id: "founder-sriyansh",
+    name: "Sriyansh Vemulakonda",
+    role: "Co-Founder",
+    bio: "Passionate about creating ideas that stand out and helping creators reach their full potential.",
     quote: "If you can dream it, we can design it.",
+    linkedinUrl: "https://www.linkedin.com/in/sriyansh-vemulakonda-949809428",
+    imageUrl: "/images/founders/sriyansh vemulakonda.png",
   },
   {
-    id: "founder-2",
-    name: "Founder Two",
-    role: "Strategy & Growth",
-    bio: "The planner who makes sure everything makes sense. Founder Two knows how to get your work in front of the right people — from social media to real-world connections through Lavent Marketing. Friendly, honest, and always ready to help you take the next step.",
+    id: "founder-raghav",
+    name: "Raghav Dadheech",
+    role: "Co-Founder",
+    bio: "Focused on strategic growth and building foundations that allow content and businesses to scale sustainably.",
     quote: "Small steps every day lead to big things.",
+    linkedinUrl: "https://www.linkedin.com/in/raghav-dadheech-434467415",
+    imageUrl: "/images/founders/RAGHAV DADHEECH.png",
+  },
+  {
+    id: "founder-khushan",
+    name: "Khushan Rathor",
+    role: "Co-Founder",
+    bio: "Dedicated to marketing learning and creating powerful brand identities that resonate with the target audience.",
+    quote: "Your spotlight won't wait.",
+    linkedinUrl: "https://www.linkedin.com/in/khushan-rathor-926032408",
+    imageUrl: "/images/founders/Khushan Rathor.png",
   },
 ];

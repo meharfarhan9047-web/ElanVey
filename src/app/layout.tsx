@@ -1,34 +1,16 @@
 import type { Metadata } from "next";
-import { Syne, DM_Sans, Archivo_Black, Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
 
-const display = Syne({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const brutal = Archivo_Black({
-  subsets: ["latin"],
-  variable: "--font-brutal",
-  weight: "400",
-  display: "swap",
-});
-
-const sans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const serif = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap",
-});
+/**
+ * Fonts are self-hosted from /public/fonts and declared via @font-face in
+ * globals.css:
+ *   - "OBO Star"  → display / headings (.font-brutal, .brutal-text, h1–h6)
+ *   - "Halenoir"  → body text (font-sans)
+ * No Google Fonts dependency — the whole site uses the bundled local fonts.
+ */
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -92,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${display.variable} ${brutal.variable} ${sans.variable} ${serif.variable}`}>
+    <html lang="en">
       <body className="font-sans overflow-x-hidden w-full">
         <Navbar />
         <main>{children}</main>

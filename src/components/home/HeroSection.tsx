@@ -35,8 +35,6 @@ export function HeroSection() {
           </p>
         </div>
       </div>
-
-      <div className="stamp-edge-bottom mt-10 md:mt-14" aria-hidden />
     </section>
   );
 }

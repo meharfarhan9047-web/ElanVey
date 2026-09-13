@@ -51,7 +51,7 @@ export function WhoIsElanVeySection() {
   return (
     <section className="relative bg-ev-black pb-8 pt-10 md:pb-12 md:pt-14">
       <div className="container-content px-5 md:px-8 lg:px-12">
-        <h2 className="text-center font-sans text-xl font-bold text-ev-white md:text-2xl">
+        <h2 className="text-center font-brutal text-xl font-bold text-ev-white md:text-2xl">
           Who is Elan Vey for?
         </h2>
 
@@ -75,8 +75,6 @@ export function WhoIsElanVeySection() {
           ))}
         </div>
       </div>
-
-      <div className="stamp-edge-top mt-10 md:mt-14" aria-hidden />
     </section>
   );
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/ui/PageHero";
-import { Section } from "@/components/ui/Section";
+import { LegalPage, type LegalSection } from "@/components/legal/LegalPage";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -9,7 +8,9 @@ export const metadata: Metadata = {
   alternates: { canonical: `${siteConfig.url}/privacy` },
 };
 
-const privacySections = [
+const lastUpdated = "August 2026";
+
+const privacySections: LegalSection[] = [
   {
     id: "information-we-collect",
     number: "01",
@@ -84,96 +85,22 @@ const privacySections = [
   },
 ];
 
-const lastUpdated = "August 2026";
-
 export default function PrivacyPage() {
   return (
-    <>
-      <PageHero
-        label="Legal"
-        title="Privacy Policy"
-        subtitle={`Last updated: ${lastUpdated}`}
-        accent="pink"
-        badge="Your Privacy Matters To Us"
-      />
-      <Section tone="paper" className="!pt-0" staggerChildren staggerDelay={70}>
-        <div className="container-content">
-          <div className="grid gap-12 lg:grid-cols-4">
-            <aside className="lg:col-span-1 stagger-child">
-              <div className="brutal-card-yellow p-6 hover-lift sticky top-28">
-                <p className="font-brutal text-xs uppercase tracking-widest">
-                  Table of Contents
-                </p>
-                <ul className="mt-6 space-y-3">
-                  {privacySections.map((s) => (
-                    <li key={s.id}>
-                      <a
-                        href={`#${s.id}`}
-                        className="group flex items-center gap-2 font-bold text-sm transition-colors hover:text-ev-neon-pink"
-                      >
-                        <span className="font-brutal text-xs text-ev-neon-red group-hover:translate-x-1 transition-transform">
-                          {s.number}
-                        </span>
-                        <span className="flex-1 leading-tight">{s.title}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </aside>
-
-            <div className="lg:col-span-3 space-y-8">
-              <div className="stagger-child brutal-card">
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex rotate-[-5deg] border-[3px] border-black bg-ev-neon-yellow px-4 py-2 font-brutal text-xs uppercase tracking-wider shadow-brutal">
-                    Last Updated: {lastUpdated}
-                  </span>
-                  <span className="inline-flex border-[3px] border-black bg-ev-neon-cyan px-4 py-2 font-brutal text-xs uppercase tracking-wider shadow-brutal">
-                    Effective Immediately
-                  </span>
-                </div>
-                <p className="mt-6 font-bold leading-relaxed text-ev-black/80">
-                  This Privacy Policy explains how Elan Vey (&quot;we&quot;,
-                  &quot;us&quot;, &quot;our&quot;) collects, uses, and looks after
-                  personal information when you use our services, website, or get
-                  in touch with us. By using our services, you agree to what
-                  we describe in this policy. We always treat your information with
-                  the same care we&apos;d want for our own.
-                </p>
-              </div>
-
-              {privacySections.map((section, i) => (
-                <article
-                  key={section.id}
-                  id={section.id}
-                  className={`stagger-child brutal-card hover-lift ${
-                    i % 3 === 1 ? "!bg-ev-neon-cream" : ""
-                  } ${i % 3 === 2 ? "!bg-ev-neon-yellow" : ""}`}
-                >
-                  <div className="flex items-baseline gap-4">
-                    <span className="font-brutal text-5xl md:text-6xl text-ev-neon-pink/30">
-                      {section.number}
-                    </span>
-                    <h2 className="brutal-text text-xl md:text-2xl text-ev-black flex-1">
-                      {section.title}
-                    </h2>
-                  </div>
-                  <div className="mt-6 pl-0 md:pl-8 space-y-4">
-                    {section.paragraphs.map((p, pi) => (
-                      <p
-                        key={pi}
-                        className="font-bold leading-relaxed text-ev-black/80"
-                      >
-                        {p}
-                      </p>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </Section>
-    </>
+    <LegalPage
+      label="Legal"
+      title="Privacy Policy"
+      lastUpdated={lastUpdated}
+      badge="Your Privacy Matters To Us"
+      accent="pink"
+      introBadges={[
+        { text: `Last Updated: ${lastUpdated}`, color: "bg-ev-neon-yellow" },
+        { text: "Effective Immediately", color: "bg-ev-neon-cyan" },
+      ]}
+      introHtml={
+        "This Privacy Policy explains how Elan Vey (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) collects, uses, and looks after personal information when you use our services, website, or get in touch with us. By using our services, you agree to what we describe in this policy. We always treat your information with the same care we&apos;d want for our own."
+      }
+      sections={privacySections}
+    />
   );
 }

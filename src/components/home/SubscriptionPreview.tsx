@@ -1,10 +1,10 @@
 import { Section } from "@/components/ui/Section";
-import { ScallopDivider } from "@/components/ui/ScallopDivider";
+import { RacetrackStrip } from "@/components/ui/RacetrackStrip";
 
 export function SubscriptionPreview() {
   return (
     <>
-    <ScallopDivider position="top" />
+    <RacetrackStrip />
     <section className="relative overflow-hidden bg-[#0a0a0a] py-12 md:py-24">
       <div className="container-content px-4 sm:px-6 md:px-8 mx-auto max-w-6xl">
         
@@ -110,7 +110,7 @@ export function SubscriptionPreview() {
         </div>
       </div>
     </section>
-    <ScallopDivider position="bottom" />
+    <RacetrackStrip />
     </>
   );
 }

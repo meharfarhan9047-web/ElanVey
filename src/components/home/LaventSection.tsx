@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/Section";
 
 export function LaventSection() {
   return (
-    <Section tone="dark">
+    <Section tone="dark" noDividerTop>
       <div className="container-content max-w-5xl text-center">
         <p className="brutal-label-dark">Exclusive Benefit</p>
         <h2 className="brutal-text brutal-text-pink mt-5 text-3xl text-ev-neon-yellow sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">

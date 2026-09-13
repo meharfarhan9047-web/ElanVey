@@ -80,7 +80,7 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed left-0 right-0 top-0 z-50 flex justify-center transition-all duration-500 ${
+        className={`fixed left-0 right-0 top-0 z-[999] flex justify-center transition-all duration-500 ${
           scrolled && !menuOpen ? "py-2.5 sm:py-3" : "py-3 sm:py-4"
         }`}
       >
@@ -103,14 +103,17 @@ export function Navbar() {
                 <img
                   src="/images/Logo_text.png"
                   alt="Elan Vey"
-                  className="h-16 w-auto md:h-20 object-contain"
+                  className="h-11 w-auto lg:h-12 xl:h-16 object-contain"
                 />
               </Link>
 
-              <ul className="flex items-center gap-1 xl:gap-2">
+              <ul className="flex items-center gap-0 xl:gap-1.5">
                 {navigation.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="nav-pill-link">
+                    <Link
+                      href={item.href}
+                      className="nav-pill-link px-2 text-[12px] tracking-[0.05em] lg:px-2.5 xl:px-4 xl:text-base xl:tracking-[0.12em]"
+                    >
                       {item.label}
                     </Link>
                   </li>
@@ -119,9 +122,9 @@ export function Navbar() {
 
               <Link
                 href="/subscription"
-                className="subscribe-btn flex-shrink-0"
+                className="subscribe-btn flex-shrink-0 px-4 text-xs xl:px-6 xl:text-base"
               >
-                Subscribe Now
+                Subscribe
               </Link>
             </div>
           </div>
@@ -129,7 +132,7 @@ export function Navbar() {
       </header>
 
       <div
-        className={`fixed inset-0 z-40 flex flex-col bg-ev-black transition-all duration-500 lg:hidden ${
+        className={`fixed inset-0 z-[998] flex flex-col bg-ev-black transition-all duration-500 lg:hidden ${
           menuOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"

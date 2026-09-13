@@ -34,11 +34,11 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["'OBO Star'", "var(--font-display)", "system-ui", "sans-serif"],
-        brutal: ["'OBO Star'", "var(--font-brutal)", "Impact", "system-ui", "sans-serif"],
+        display: ["'OBO Star'", "Impact", "system-ui", "sans-serif"],
+        brutal: ["'OBO Star'", "Impact", "system-ui", "sans-serif"],
         obo: ["'OBO Star'", "Impact", "sans-serif"],
-        sans: ["'Halenoir'", "var(--font-sans)", "system-ui", "sans-serif"],
-        serif: ["var(--font-serif)", "Georgia", "serif"],
+        sans: ["'Halenoir'", "system-ui", "sans-serif"],
+        serif: ["Georgia", "'Times New Roman'", "serif"],
       },
       backgroundImage: {
         "gradient-brand":

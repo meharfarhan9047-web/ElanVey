@@ -30,7 +30,7 @@ export const founders: Founder[] = [
   {
     id: "founder-khushan",
     name: "Khushan Rathor",
-    role: "Co-Founder",
+    role: "Founder",
     bio: "Dedicated to marketing learning and creating powerful brand identities that resonate with the target audience.",
     quote: "Your spotlight won't wait.",
     linkedinUrl: "https://www.linkedin.com/in/khushan-rathor-926032408",

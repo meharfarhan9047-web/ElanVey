@@ -8,7 +8,13 @@ export function SectionThree() {
 
           {/* Headline matching Mockup 2 */}
           <div className="mx-auto max-w-5xl text-center lg:max-w-6xl">
-            <h2 className="font-brutal text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-black leading-tight">
+            <h2
+              className="font-brutal text-4xl uppercase leading-[0.9] text-ev-neon-yellow sm:text-5xl md:text-6xl lg:text-7xl"
+              style={{ textShadow: "3px 3px 0 #000, 5px 5px 0 #000" }}
+            >
+              The Vey Forward
+            </h2>
+            <h2 className="mt-5 font-brutal text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight text-black leading-tight">
               WHETHER YOU CREATE, BUILD, PERFORM, SELL,
               <br className="hidden md:block" />
               OR SIMPLY HAVE A TALENT WAITING TO BE DISCOVERED.

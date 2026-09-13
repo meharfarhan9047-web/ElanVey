@@ -152,9 +152,6 @@ export default function ContactPage() {
                       @
                     </a>
                   </div>
-                  <p className="mt-3 text-sm font-bold opacity-80">
-                    IG: elan.vey · FB: elan.vey
-                  </p>
                 </div>
               </div>
             </Reveal>

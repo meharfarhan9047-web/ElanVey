@@ -35,12 +35,12 @@ export function SectionOne() {
               </p>
               <div className="hero-stagger-children mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-4 md:gap-6">
                 <Button
-                  href="/contact"
+                  href="/waitlist"
                   variant="primary"
                   size="lg"
                   className="whitespace-nowrap"
                 >
-                  Start The Vey
+                  Join the Waitlist
                 </Button>
                 <Button
                   href="/subscription"

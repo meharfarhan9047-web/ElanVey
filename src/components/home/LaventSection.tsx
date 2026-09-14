@@ -16,8 +16,13 @@ export function LaventSection() {
           When you onboard with Elan Vey, you gain real-world marketing exposure and learning opportunities connected with Lavent Marketing.
         </p>
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-          <Button href="/subscription" variant="primary" size="lg">
-            Learn About Subscription
+          <Button
+            href="https://www.laventmarketing.com/"
+            external
+            variant="primary"
+            size="lg"
+          >
+            Know More
           </Button>
           <Button href="/about" variant="secondary" size="lg">
             About Us

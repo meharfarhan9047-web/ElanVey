@@ -132,7 +132,7 @@ export default function SubscriptionPage() {
                 </p>
                 <div className="mt-4 flex items-baseline gap-2">
                   <p className="font-brutal text-3xl text-ev-neon-red md:text-4xl">
-                    Call for Pricing
+                    ₹1799/month
                   </p>
                 </div>
                 <p className="mt-2 text-sm font-bold text-ev-black/70">
@@ -147,8 +147,8 @@ export default function SubscriptionPage() {
                   </span>
                 </div>
                 <div className="mt-8">
-                  <Button href="/contact" className="w-full">
-                    Call Us Now
+                  <Button href="/waitlist" className="w-full">
+                    Join the Waitlist
                   </Button>
                 </div>
               </div>

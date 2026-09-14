@@ -3,6 +3,45 @@
 import Link from "next/link";
 import { processSteps } from "@/data/process";
 
+// A distinct colour scheme per step card (gradient bg + text colours tuned for contrast)
+const cardStyles = [
+  {
+    bg: "from-[#FF1744] to-[#FF3D8B]",
+    num: "text-[#FDF6D8]",
+    title: "text-ev-neon-yellow",
+    desc: "text-ev-neon-yellow/90",
+    cta: "text-ev-neon-yellow hover:text-white",
+  },
+  {
+    bg: "from-[#00CCFF] to-[#0066FF]",
+    num: "text-white",
+    title: "text-ev-black",
+    desc: "text-ev-black/80",
+    cta: "text-ev-black hover:text-white",
+  },
+  {
+    bg: "from-[#FFE600] to-[#FFB800]",
+    num: "text-[#FF1744]",
+    title: "text-ev-black",
+    desc: "text-ev-black/80",
+    cta: "text-[#FF1744] hover:text-ev-black",
+  },
+  {
+    bg: "from-[#8B5CF6] to-[#FF0066]",
+    num: "text-ev-neon-yellow",
+    title: "text-white",
+    desc: "text-white/90",
+    cta: "text-ev-neon-yellow hover:text-white",
+  },
+  {
+    bg: "from-[#0a0a0a] to-[#2b2b2b]",
+    num: "text-[#FF1744]",
+    title: "text-ev-neon-yellow",
+    desc: "text-ev-neon-yellow/80",
+    cta: "text-ev-neon-yellow hover:text-white",
+  },
+];
+
 export function SectionFour() {
   return (
     <section
@@ -16,7 +55,7 @@ export function SectionFour() {
           
           {/* CARD 1 — "How We Work" Red Card (Sticky) */}
           {/* Using sticky top-[10%] so it stays in place while Card 2 slides over it */}
-          <div className="sticky top-20 sm:top-24 md:top-32 z-10 w-full mb-24 md:mb-40 shadow-[12px_12px_0_0_#FFE600] rounded-[2rem] md:rounded-[3rem] bg-[#FF176B] overflow-hidden">
+          <div className="sticky top-20 sm:top-24 md:top-32 z-10 w-full mb-24 md:mb-40 rounded-[2rem] md:rounded-[3rem] bg-[#FF176B] overflow-hidden">
             <div className="flex flex-col lg:flex-row items-center justify-between p-8 sm:p-10 md:p-14 lg:p-16 min-h-[500px]">
               
               {/* Left Side: Title & Subtitle */}
@@ -52,44 +91,47 @@ export function SectionFour() {
             </div>
           </div>
 
-          {/* CARD 2-6: The 5 Process Steps as separate stacking cards */}
-          {processSteps.map((step, idx) => (
-            <div
-              key={step.index}
-              className="sticky w-full rounded-[2rem] md:rounded-[3rem] border-[3px] border-black bg-ev-black shadow-[12px_12px_0_0_rgba(0,0,0,0.8)] p-8 sm:p-10 md:p-14 lg:p-16 mb-24 md:mb-40 flex items-center justify-center min-h-[500px]"
-              style={{ 
-                top: `calc(100px + ${idx * 40}px)`, 
-                zIndex: (idx + 2) * 10 
-              }}
-            >
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 w-full max-w-4xl mx-auto">
-                <span className="font-brutal text-7xl sm:text-8xl md:text-[8rem] lg:text-[10rem] font-black text-[#FF1744] leading-none shrink-0 drop-shadow-md">
-                  {step.index}
-                </span>
-                <div className="flex flex-col justify-center text-center md:text-left mt-2 md:mt-6">
-                  <h3 className="font-brutal text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase text-[#FFE600] leading-tight">
-                    {step.title}
-                  </h3>
-                  <p className="mt-4 md:mt-6 text-lg sm:text-xl md:text-2xl font-bold leading-relaxed text-ev-neon-yellow/80">
-                    {step.description}
-                  </p>
-                  
-                  {/* If it's the last step, show the CTA link */}
-                  {idx === processSteps.length - 1 && (
-                    <div className="mt-10 md:mt-12">
-                      <Link
-                        href="/services#process"
-                        className="font-brutal text-base sm:text-lg md:text-xl font-black uppercase tracking-wider text-[#FFE600] hover:text-white transition-colors inline-flex items-center gap-3"
-                      >
-                        LEARN MORE ABOUT OUR PROCESS
-                        <span className="text-2xl">→</span>
-                      </Link>
-                    </div>
-                  )}
+          {/* CARD 2-6: The 5 Process Steps as separate stacking cards, each a different colour */}
+          {processSteps.map((step, idx) => {
+            const c = cardStyles[idx % cardStyles.length];
+            return (
+              <div
+                key={step.index}
+                className={`sticky w-full rounded-[2rem] md:rounded-[3rem] border-[3px] border-black bg-gradient-to-br ${c.bg} p-8 sm:p-10 md:p-14 lg:p-16 mb-24 md:mb-40 flex items-center justify-center min-h-[500px]`}
+                style={{
+                  top: `calc(100px + ${idx * 40}px)`,
+                  zIndex: (idx + 2) * 10,
+                }}
+              >
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 w-full max-w-4xl mx-auto">
+                  <span className={`font-brutal text-7xl sm:text-8xl md:text-[8rem] lg:text-[10rem] font-black leading-none shrink-0 drop-shadow-md ${c.num}`}>
+                    {step.index}
+                  </span>
+                  <div className="flex flex-col justify-center text-center md:text-left mt-2 md:mt-6">
+                    <h3 className={`font-brutal text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase leading-tight ${c.title}`}>
+                      {step.title}
+                    </h3>
+                    <p className={`mt-4 md:mt-6 text-lg sm:text-xl md:text-2xl font-bold leading-relaxed ${c.desc}`}>
+                      {step.description}
+                    </p>
+
+                    {/* If it's the last step, show the CTA link */}
+                    {idx === processSteps.length - 1 && (
+                      <div className="mt-10 md:mt-12">
+                        <Link
+                          href="/services#process"
+                          className={`font-brutal text-base sm:text-lg md:text-xl font-black uppercase tracking-wider transition-colors inline-flex items-center gap-3 ${c.cta}`}
+                        >
+                          LEARN MORE ABOUT OUR PROCESS
+                          <span className="text-2xl">→</span>
+                        </Link>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
 
         </div>
       </div>

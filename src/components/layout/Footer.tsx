@@ -124,7 +124,15 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
           <p className="text-xs font-brutal uppercase tracking-[0.1em] text-white/40">
-            Crafted with care by Elan Vey
+            Crafted with care by{" "}
+            <a
+              href="https://www.sanganakhq.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold"
+            >
+              SanganakHQ
+            </a>
           </p>
           <ul className="flex gap-6">
             {footerNavigation.legal.map((item) => (

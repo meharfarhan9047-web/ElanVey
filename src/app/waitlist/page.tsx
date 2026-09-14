@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { siteConfig } from "@/data/site";
+import { WaitlistSignup } from "@/components/waitlist/WaitlistSignup";
+import { RacetrackStrip } from "@/components/ui/RacetrackStrip";
 
 export const metadata: Metadata = {
   title: "Join the Waitlist",
@@ -72,7 +74,31 @@ export default function WaitlistPage() {
             </p>
           </div>
         </div>
-        <div className="stamp-edge-bottom mt-12 md:mt-16" aria-hidden />
+      </section>
+      <RacetrackStrip />
+
+      <section className="relative overflow-hidden bg-[#0a0a0a] py-10 text-center text-white md:py-14">
+        <div className="container-content px-5 md:px-8 lg:px-12">
+          <p className="font-brutal text-xs uppercase tracking-[0.3em] text-ev-neon-cyan">You heard it first 👀</p>
+          <h2 className="mt-4 font-brutal text-3xl uppercase leading-tight text-ev-neon-yellow sm:text-4xl md:text-5xl">
+            Early access offer
+          </h2>
+          <p className="mt-4 font-brutal text-4xl text-ev-neon-pink sm:text-5xl md:text-6xl">
+            ₹1,583 <del className="text-2xl text-white/50 sm:text-3xl">₹1,799</del>
+          </p>
+          <p className="mt-2 font-brutal text-sm uppercase tracking-widest text-ev-neon-cyan">12% OFF · Limited launch spots</p>
+          <p className="mx-auto mt-5 max-w-2xl text-base font-bold leading-relaxed text-white/75 md:text-lg">
+            Elan Vey is almost here. Get early access and be part of what’s coming from day one.
+          </p>
+          <div className="mx-auto mt-8 max-w-2xl rounded-xl border-[3px] border-ev-neon-cyan bg-white p-5 text-left text-ev-black shadow-brutal md:p-6">
+            <p className="font-brutal text-lg uppercase text-ev-neon-red">Join the waitlist</p>
+            <p className="mt-1 text-sm font-bold text-black/70">Enter your email and we’ll send your early access details.</p>
+            <WaitlistSignup />
+          </div>
+          <a href={`mailto:${siteConfig.contact.email}?subject=Save my spot`} className="mt-7 inline-flex border-[3px] border-black bg-ev-neon-yellow px-7 py-3 font-brutal uppercase text-ev-neon-red shadow-brutal hover:scale-105">
+            SAVE MY SPOT!
+          </a>
+        </div>
       </section>
 
       {/* ============ CONTACT INFO + CTA (paper) ============ */}

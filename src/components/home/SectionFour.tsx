@@ -93,25 +93,24 @@ export function SectionFour() {
 
           {/* CARD 2-6: The 5 Process Steps as separate stacking cards, each a different colour */}
           {processSteps.map((step, idx) => {
-            const c = cardStyles[idx % cardStyles.length];
             return (
               <div
                 key={step.index}
-                className={`sticky w-full rounded-[2rem] md:rounded-[3rem] border-[3px] border-black bg-gradient-to-br ${c.bg} p-8 sm:p-10 md:p-14 lg:p-16 mb-24 md:mb-40 flex items-center justify-center min-h-[500px]`}
+                className="sticky w-full rounded-[2rem] md:rounded-[3rem] border-[3px] border-black bg-ev-black p-8 sm:p-10 md:p-14 lg:p-16 mb-24 md:mb-40 flex items-center justify-center min-h-[500px]"
                 style={{
                   top: `calc(100px + ${idx * 40}px)`,
                   zIndex: (idx + 2) * 10,
                 }}
               >
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 w-full max-w-4xl mx-auto">
-                  <span className={`font-brutal text-7xl sm:text-8xl md:text-[8rem] lg:text-[10rem] font-black leading-none shrink-0 drop-shadow-md ${c.num}`}>
+                  <span className="font-brutal text-7xl sm:text-8xl md:text-[8rem] lg:text-[10rem] font-black text-[#FF1744] leading-none shrink-0 drop-shadow-md">
                     {step.index}
                   </span>
                   <div className="flex flex-col justify-center text-center md:text-left mt-2 md:mt-6">
-                    <h3 className={`font-brutal text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase leading-tight ${c.title}`}>
+                    <h3 className="font-brutal text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase text-[#FFE600] leading-tight">
                       {step.title}
                     </h3>
-                    <p className={`mt-4 md:mt-6 text-lg sm:text-xl md:text-2xl font-bold leading-relaxed ${c.desc}`}>
+                    <p className="mt-4 md:mt-6 text-lg sm:text-xl md:text-2xl font-bold leading-relaxed text-ev-neon-yellow/80">
                       {step.description}
                     </p>
 
@@ -120,7 +119,7 @@ export function SectionFour() {
                       <div className="mt-10 md:mt-12">
                         <Link
                           href="/services#process"
-                          className={`font-brutal text-base sm:text-lg md:text-xl font-black uppercase tracking-wider transition-colors inline-flex items-center gap-3 ${c.cta}`}
+                          className="font-brutal text-base sm:text-lg md:text-xl font-black uppercase tracking-wider text-[#FFE600] hover:text-white transition-colors inline-flex items-center gap-3"
                         >
                           LEARN MORE ABOUT OUR PROCESS
                           <span className="text-2xl">→</span>

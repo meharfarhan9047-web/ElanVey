@@ -58,7 +58,7 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-4xl text-center">
             <div className="hero-stagger-label mb-6 flex justify-center">
               <span className="inline-block rotate-[-2deg] border-[3px] border-black bg-ev-neon-cyan px-5 py-2 font-brutal text-xs uppercase tracking-wider shadow-brutal">
-                4 Core Services · 1 Friendly Team
+                2 Core Services · 1 Friendly Team
               </span>
             </div>
             <p className="hero-stagger-label font-brutal text-xs uppercase tracking-[0.3em] text-ev-neon-pink">

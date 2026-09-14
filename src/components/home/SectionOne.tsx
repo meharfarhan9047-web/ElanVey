@@ -1,4 +1,3 @@
-import { RacetrackStrip } from "@/components/ui/RacetrackStrip";
 import {
   AnimatedPacManPillIcon,
   BlueStarIcon,
@@ -59,7 +58,7 @@ export function SectionOne() {
               <div className="hero-stagger-children w-full max-w-md lg:max-w-none overflow-hidden border-[3px] border-black shadow-brutal-xl rounded-2xl sm:rounded-3xl">
                 <video
                   className="block h-auto w-full object-cover animate-[spin_30s_linear_infinite] scale-[1.45]"
-                  src="/videos/Website_homepage.mp4"
+                  src="/videos/ElanVeyHeroVideo.MP4"
                   autoPlay
                   muted
                   loop
@@ -76,7 +75,7 @@ export function SectionOne() {
       </section>
 
       {/* DARK SECTION: Who is Elan Vey For? + One Vey between You & Being Seen. */}
-      <RacetrackStrip />
+      <ScallopDivider position="top" />
       <section className="ev-spot" aria-labelledby="ev-title">
         <style
           dangerouslySetInnerHTML={{
@@ -332,7 +331,7 @@ export function SectionOne() {
         </div>
       </section>
 
-      <RacetrackStrip />
+      <ScallopDivider position="bottom" />
 
       {/* White Paper Section — Team Behind Your Content */}
       <section
@@ -352,7 +351,7 @@ export function SectionOne() {
             <h2 className="font-halenoir font-black text-4xl uppercase tracking-tight text-black sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               <span className="relative inline-block">
                 THE TEAM
-                <div className="absolute -right-8 -top-6 rotate-[12deg] md:-right-16 md:-top-10 lg:-right-24 lg:-top-14 z-10">
+                <div className="absolute -right-6 -top-14 rotate-[10deg] md:-right-10 md:-top-[5rem] lg:-right-20 lg:-top-[6.75rem] z-10">
                   <span className="inline-block rounded-full bg-ev-neon-pink px-4 py-2 text-xs font-bold uppercase tracking-wider text-ev-neon-yellow md:px-6 md:py-3 md:text-sm lg:px-8 lg:py-4 lg:text-base border-[2px] border-black shadow-brutal-sm">
                     GET YOUR TEAM
                   </span>

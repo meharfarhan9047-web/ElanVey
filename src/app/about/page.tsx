@@ -54,20 +54,6 @@ const differentiators = [
   },
 ];
 
-const slogans = [
-  "We Make Good Look Unmissable.",
-  "Your Vision. Our Visionary Chaos.",
-  "Less &quot;Marketing.&quot; More &quot;Damn, Who Made This?&quot;",
-  "Your Voice — Louder, Bolder, Seen.",
-];
-
-const sloganColors = [
-  "bg-ev-neon-pink text-white",
-  "bg-ev-neon-cyan text-ev-black",
-  "bg-ev-neon-yellow text-ev-black",
-  "bg-ev-neon-cream text-ev-black",
-];
-
 const values = [
   {
     title: "Our Mission",
@@ -189,25 +175,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ============ SLOGANS (dark) ============ */}
-      <RacetrackStrip />
-      <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-white md:py-24">
-        <div className="container-content px-5 md:px-8 lg:px-12">
-          <Reveal className="mx-auto max-w-5xl space-y-5 md:space-y-7">
-            {slogans.map((slogan, i) => (
-              <div
-                key={slogan}
-                className={`border-[3px] border-black px-6 py-6 shadow-brutal hover-lift sm:px-10 sm:py-8 md:px-14 md:py-10 ${sloganColors[i % sloganColors.length]}`}
-              >
-                <p
-                  className="text-center font-brutal text-2xl font-black uppercase leading-[0.95] tracking-tight sm:text-3xl md:text-4xl lg:text-5xl"
-                  dangerouslySetInnerHTML={{ __html: slogan }}
-                />
-              </div>
-            ))}
-          </Reveal>
-        </div>
-      </section>
       {/* ============ EV STAMP STORY (paper) ============ */}
       <section
         className="relative overflow-hidden py-16 md:py-24"

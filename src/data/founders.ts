@@ -10,6 +10,15 @@ export interface Founder {
 
 export const founders: Founder[] = [
   {
+    id: "founder-khushan",
+    name: "Khushan Rathor",
+    role: "Founder",
+    bio: "Dedicated to marketing learning and creating powerful brand identities that resonate with the target audience.",
+    quote: "Your spotlight won't wait.",
+    linkedinUrl: "https://www.linkedin.com/in/khushan-rathor-926032408",
+    imageUrl: "/images/founders/Khushan Rathor.png",
+  },
+  {
     id: "founder-sriyansh",
     name: "Sriyansh Vemulakonda",
     role: "Co-Founder",
@@ -26,14 +35,5 @@ export const founders: Founder[] = [
     quote: "Small steps every day lead to big things.",
     linkedinUrl: "https://www.linkedin.com/in/raghav-dadheech-434467415",
     imageUrl: "/images/founders/RAGHAV DADHEECH.png",
-  },
-  {
-    id: "founder-khushan",
-    name: "Khushan Rathor",
-    role: "Founder",
-    bio: "Dedicated to marketing learning and creating powerful brand identities that resonate with the target audience.",
-    quote: "Your spotlight won't wait.",
-    linkedinUrl: "https://www.linkedin.com/in/khushan-rathor-926032408",
-    imageUrl: "/images/founders/Khushan Rathor.png",
   },
 ];

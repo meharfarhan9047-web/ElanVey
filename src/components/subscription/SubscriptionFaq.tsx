@@ -16,10 +16,10 @@ export function SubscriptionFaq() {
           <button
             type="button"
             onClick={() => setOpen(open === i ? null : i)}
-            className="flex w-full cursor-pointer items-center justify-between gap-4 text-left font-brutal uppercase"
+            className="flex w-full cursor-pointer items-center justify-between gap-4 text-left font-brutal uppercase text-ev-black"
             aria-expanded={open === i}
           >
-            <span className="pr-4">{faq.question}</span>
+            <span className="pr-4 text-base leading-tight text-ev-black sm:text-lg md:text-xl">{faq.question}</span>
             <span
               className={`flex-shrink-0 font-brutal text-2xl text-ev-neon-pink transition-transform duration-300 ${
                 open === i ? "rotate-45" : ""

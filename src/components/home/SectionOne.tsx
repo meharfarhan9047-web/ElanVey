@@ -58,7 +58,7 @@ export function SectionOne() {
               <div className="hero-stagger-children w-full max-w-md lg:max-w-none overflow-hidden border-[3px] border-black shadow-brutal-xl rounded-2xl sm:rounded-3xl">
                 <video
                   className="block h-auto w-full object-cover animate-[spin_30s_linear_infinite] scale-[1.45]"
-                  src="/videos/ElanVeyHeroVideo.MP4"
+                  src="/videos/ElanVeyHeroVideo.mp4"
                   autoPlay
                   muted
                   loop

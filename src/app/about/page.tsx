@@ -28,7 +28,7 @@ const differentiators = [
     color: "bg-ev-neon-pink text-white",
   },
   {
-    title: "Bold, eye-catching design — no boring templates.",
+    title: "Creators. Editors. Designers. Strategists. All in.",
     icon: "▲",
     color: "bg-ev-neon-cyan",
   },

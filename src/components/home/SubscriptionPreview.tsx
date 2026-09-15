@@ -32,7 +32,7 @@ export function SubscriptionPreview() {
         
         {/* TITLE BLOCK */}
         <div className="w-full text-center mb-8 md:mb-16">
-          <h2 className="font-brutal text-3xl sm:text-5xl md:text-7xl lg:text-[6rem] font-black uppercase text-[#FFE600] leading-[1.05] inline-block"
+          <h2 className="font-brutal text-2xl sm:text-5xl md:text-7xl lg:text-[6rem] font-black uppercase text-[#FFE600] leading-[1.05] inline-block"
               style={{ textShadow: "2px 2px 0 #FF1744, 4px 4px 0 #FF1744, 6px 6px 0 #FF1744" }}>
             <span className="relative inline-block pr-8 sm:pr-12 md:pr-16">
               ONE VEY BETWEEN YOU

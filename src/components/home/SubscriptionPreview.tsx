@@ -50,30 +50,18 @@ export function SubscriptionPreview() {
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 md:gap-10 items-stretch mx-auto">
           
           {/* LEFT / TOP: Red Card with Shield */}
-          <div className="bg-[#FF1744] rounded-[20px] p-5 md:p-8 relative overflow-hidden flex flex-col min-h-[320px] md:min-h-[380px]">
-            <div className="relative z-10">
-              <h3 className="font-brutal text-3xl md:text-4xl lg:text-5xl font-black text-[#FFE600] uppercase leading-[0.9]">
-                THE VEY<br/>FORWARD
-              </h3>
-              <p className="font-sans text-base md:text-lg text-[#FFE600] mt-1 tracking-tight italic">
-                subscription
-              </p>
-            </div>
-            
-            {/* Huge Black Shield — centered in the card */}
-            <div className="absolute inset-0 flex items-center justify-center z-0">
-              <div className="relative w-[65%] md:w-[60%] aspect-[5/6]">
-                <svg viewBox="0 0 100 120" className="absolute inset-0 w-full h-full fill-[#151515]">
-                  <path d="M 5 15 L 50 5 L 95 15 L 95 60 C 95 90 70 115 50 120 C 30 115 5 90 5 60 Z" />
-                </svg>
-                {/* Text inside Shield */}
-                <div className="absolute inset-0 flex items-center justify-center pt-4">
-                  <span className="font-sans text-[#f5f5f5] text-base md:text-xl lg:text-2xl font-black uppercase text-center tracking-widest leading-snug">
-                    REFERENCE<br/>STATIC
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div className="relative flex min-h-[320px] overflow-hidden rounded-[28px] md:min-h-[380px]">
+            <video
+              className="h-full w-full rounded-[28px] object-contain"
+              src="/videos/IMG_1043.MP4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              preload="metadata"
+              aria-label="Elan Vey video"
+            />
           </div>
 
           {/* RIGHT / BOTTOM: Pricing, Checkerboard, Buttons, Details */}
@@ -87,11 +75,11 @@ export function SubscriptionPreview() {
             </div>
 
             {/* 1. Pricing */}
-            <div className="lg:bg-[#FFE600] lg:rounded-full lg:py-3 lg:px-6 w-full mb-4 lg:mb-5">
+            <div className="lg:bg-[#FFE600] lg:rounded-full lg:py-3 lg:px-6 w-full mb-4 lg:mb-5 flex items-baseline justify-center gap-2 whitespace-nowrap">
               <span className="font-brutal text-4xl sm:text-5xl md:text-4xl lg:text-5xl font-black text-[#FFE600] lg:text-[#FF1744] tracking-tight leading-none whitespace-nowrap">
                 ₹1,583 <del className="ml-2 text-2xl text-white/60 lg:text-[#FF1744]/60">₹1,799</del>
               </span>
-              <span className="ml-3 font-brutal text-sm text-ev-neon-pink">12% OFF</span>
+              <span className="font-brutal text-sm text-ev-neon-pink">12% OFF</span>
             </div>
 
             {/* 2. Checkerboard Strip */}

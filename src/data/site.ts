@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Elan Vey",
-  tagline: "Creative designs that make your ideas shine",
+  tagline: "You were meant to create. Not spend your life figuring out how to be seen. Craft yourself. Let us handle “how-to”.",
   description:
     "Elan Vey helps people and small projects stand out with creative designs, smart planning, and real marketing experience connected to Lavent Marketing.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://elanvey.com",

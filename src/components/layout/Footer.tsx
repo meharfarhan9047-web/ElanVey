@@ -23,7 +23,7 @@ export function Footer() {
           </Link>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <p className="font-brutal text-sm uppercase tracking-widest text-ev-neon-yellow hidden lg:block">
-              Ready to elevate your presence?
+              Architect your limelight.
             </p>
             <Button href="/contact" variant="primary" size="lg">
               Start a Conversation →
@@ -41,7 +41,7 @@ export function Footer() {
               About
             </h4>
             <p className="text-sm font-medium leading-relaxed text-white/70 mb-6">
-              Creative designs that make your ideas shine. Friendly creative help for everyone — individuals, small shops, and all your big ideas.
+              You were meant to create. Not spend your life figuring out how to be seen. Craft yourself. Let us handle “how-to”.
             </p>
             <p className="text-xs font-bold leading-relaxed text-white/40 uppercase tracking-wider">
               {siteConfig.contact.address}

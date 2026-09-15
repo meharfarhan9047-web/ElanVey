@@ -90,6 +90,22 @@ export default function SubscriptionPage() {
         </div>
       </section>
 
+      <section className="relative overflow-hidden px-5 py-8 md:px-8 md:py-12">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-[20px]">
+          <video
+            className="mx-auto block max-h-[620px] w-full rounded-[20px] object-contain"
+            src="/videos/IMG_1043.MP4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+            preload="metadata"
+            aria-label="Elan Vey subscription video"
+          />
+        </div>
+      </section>
+
       {/* ============ WHAT'S INCLUDED + PRICING (paper) ============ */}
       <section
         className="relative overflow-hidden py-16 md:py-24"
